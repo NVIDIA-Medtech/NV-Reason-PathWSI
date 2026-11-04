@@ -24,7 +24,7 @@ import torch
 from transformers import AutoModelForImageTextToText, AutoProcessor
 
 
-DEFAULT_MODEL = "nvidia/NV-Reason-PathWSI-4B"
+DEFAULT_MODEL = "nvidia/NV-Reason-PathWSI"
 
 
 def parse_args():

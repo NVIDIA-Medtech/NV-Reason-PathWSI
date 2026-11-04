@@ -2,11 +2,11 @@
 
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/nvidia/NV-Reason-PathWSI)
 [![GitHub](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/NVIDIA-Medtech/NV-Reason-PathWSI)
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-B31B1B?logo=arxiv&logoColor=white)](https://arxiv.org/abs/XXXX.XXXXX)
+[![arXiv](https://img.shields.io/badge/arXiv-2510.04587-B31B1B?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.04587)
 [![License](https://img.shields.io/badge/License-OpenMDW--1.1-f5de53)](LICENSE)
 
 NV-Reason-PathWSI is a generative vision-language model for whole-slide
-pathology image (WSI) interpretation. It combines a Qwen3.5-4B language model
+pathology image (WSI) interpretation. It combines a Qwen3.5 language model
 with a gigapixel whole-slide vision tower and supports abnormality and lesion
 classification, structured report generation, visual question answering, and
 interactive reasoning from digitized histopathology slides.
@@ -498,10 +498,12 @@ Third-party package licenses are listed in
 ## Citation
 
 ```bibtex
-@article{nvreasonpathwsi,
-  title  = {NV-Reason-PathWSI: Whole-Slide Pathology Vision-Language Model},
-  author = {NVIDIA},
-  year   = {2026},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX}
+@article{wang2026pathologycot,
+  title   = {Pathology-CoT: Learning Visual Chain-of-Thought Agent from Expert
+             Whole Slide Image Diagnosis Behavior},
+  author  = {Wang, Sheng and Wu, Ruiming and Herndon, Charles and Liu, Yihang
+             and Koga, Shunsuke and Shen, Jeanne and Huang, Zhi},
+  year    = {2026},
+  journal = {arXiv preprint arXiv:2510.04587}
 }
 ```
