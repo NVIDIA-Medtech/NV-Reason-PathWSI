@@ -12,7 +12,7 @@ Output: the same records plus {"response": "<generated text>"}.
 
 Example:
   python inference_vllm.py \
-      --model nvidia/NV-Reason-PathWSI-4B \
+      --model nvidia/NV-Reason-PathWSI \
       --input queries.jsonl --output responses.jsonl
 """
 
@@ -28,7 +28,7 @@ from vllm import LLM, SamplingParams
 
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--model", default="nvidia/NV-Reason-PathWSI-4B", help="Model directory or HF model ID")
+    parser.add_argument("--model", default="nvidia/NV-Reason-PathWSI", help="Model directory or HF model ID")
     parser.add_argument(
         "--input", required=True, help="JSONL with {'image', 'prompt'} records"
     )

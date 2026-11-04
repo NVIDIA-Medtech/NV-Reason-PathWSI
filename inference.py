@@ -3,17 +3,17 @@
 """Standalone NV-Reason-PathWSI inference on one pathology image (transformers backend).
 
 Works with both packaged models:
-  nvidia/NV-Reason-PathWSI-4B    (~9 GB, 1x GPU >= 24 GB)
-  nvidia/NV-Reason-PathWSI-4B    (~51 GB, 1x 80 GB GPU or
+  nvidia/NV-Reason-PathWSI    (~9 GB, 1x GPU >= 24 GB)
+  nvidia/NV-Reason-PathWSI    (~51 GB, 1x 80 GB GPU or
                                                  multi-GPU with --device-map auto)
 
 Examples:
-  python inference.py --model nvidia/NV-Reason-PathWSI-4B \
+  python inference.py --model nvidia/NV-Reason-PathWSI \
       --image examples/sample_1.jpg \
       --prompt "Describe the histopathological features visible in this image."
 
   # Thinking mode (used by the reasoning benchmarks):
-  python inference.py --model nvidia/NV-Reason-PathWSI-4B \
+  python inference.py --model nvidia/NV-Reason-PathWSI \
       --image examples/sample_1.jpg --prompt "..." --think
 """
 
@@ -31,8 +31,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--model",
-        default="nvidia/NV-Reason-PathWSI-4B",
-        help=f"Local model directory or Hugging Face model ID (default: {mid})",
+        default="nvidia/NV-Reason-PathWSI",
+        help=f"Local model directory or Hugging Face model ID (default: {DEFAULT_MODEL})",
     )
     parser.add_argument("--image", required=True, help="Path to a pathology image")
     parser.add_argument(
