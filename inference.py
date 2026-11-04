@@ -57,8 +57,6 @@ def parse_args():
 
 def main():
     args = parse_args()
-    if not Path(args.model).is_dir():
-        raise SystemExit(f"model directory not found: {args.model}")
     if not Path(args.image).is_file():
         raise SystemExit(f"image not found: {args.image}")
 
