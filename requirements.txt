@@ -1,0 +1,8 @@
+# Pinned to the environment that produced the reported benchmark numbers.
+# Install PyTorch with the CUDA build matching your driver; the reference
+# the reported benchmark environment used torch 2.10.0+cu128.
+torch==2.10.0
+transformers==5.8.1
+accelerate==1.13.0
+vllm==0.19.0
+Pillow

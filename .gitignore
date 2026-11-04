@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+
+# Local inference outputs and downloaded weights
+responses*.jsonl
+models/
+*.safetensors
+*.bin
