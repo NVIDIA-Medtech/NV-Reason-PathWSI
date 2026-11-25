@@ -1,5 +1,13 @@
 # NV-Reason-PathWSI Model Card
 
+NV-Reason-PathWSI is a 2D vision-language model (VLM) for pathology whole-slide image (WSI) analysis. It combines a 2D vision encoder (Vision Transformer (ViT)) with a language model and is designed for pathology report generation, general question answering, and multi-step reasoning across digitized histopathology slides.
+
+Whole-slide images encode clinically important morphology across gigapixel-scale tissue regions, yet most vision-language systems either operate on isolated tiles without slide-level context or compress slide-level features before language decoding. The 2D vision encoder converts tiled histopathology image regions into visual tokens. All tokens and their corresponding 2D positions are passed to the language model without spatial downsampling, while 2D positional encoding preserves their spatial relationships within the large language model (LLM). Input whole-slide images are tiled into image regions before processing.
+
+The model was trained end-to-end using Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO) on a curated dataset of structured question-answering (QA) examples derived from whole-slide images. The training corpus integrates standardized pathology reports, abnormality-focused QA, multi-turn interactions, and pathologist-authored reasoning collected from expert whole-slide image interpretations. These expert annotations also guide the generation of report-grounded synthetic reasoning data for SFT, while GRPO uses verifiable rewards over pathology finding sets.
+
+This model is ready for commercial or non-commercial use.
+
 ## License/Terms of Use
 
 Use of this model is governed by the [OpenMDW-1.1 License](LICENSE).
